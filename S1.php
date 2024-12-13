@@ -10,7 +10,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="Js/Java.js"></script>
+    <script src="ct/script.js"></script>
 
     
         <title>Anime Of Home</title>
@@ -23,87 +23,70 @@ $conn->close();
     </div>
     
     <div class="sidebar hover-frame p-10 shadow-lg rounded-lg mt-30 bg-cover bg-center" style="background-image: url('Fons/fon34.jpg');">
-        <div class="flex items-center justify-center mb-4">
-            <img src="Fons\fon3.jpg" alt="Logo" class="h-32 w-32 rounded-full">
-        </div>
-    
-        <div class="flex flex-col space-y-4">
-            <div class="flex flex-col items-center w-full">
-                <a href="#welcome-section" class="w-full">
-                    <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                        Головна
-                    </button>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center w-full">
-                <a href="http://localhost/Anime%20Of%20Home/S2.php" class="w-full">
-                <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                        Профіль
-                    </button>
-                </a>
-            </div>
-            
-            
-           <div class="flex flex-col items-center w-full">
-                 <a class="w-full">
-                <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                    Пошук
-                </button>
-                </a>
-            </div>
-
-            <a href="#anime-section">
-                <div class="flex flex-col items-center w-full">
-                    <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                        Аніме
-                    </button>
-                </div>
-            </a>
-            <div class="flex flex-col items-center w-full">
-                <a href="#new-arrivals" class="w-full">
-                    <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                        Новинки
-                    </button>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center w-full">
-                <a href="#about-us" class="w-full">
-                    <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                        Про нас
-                    </button>
-                </a>
-            </div>
-
-            <div class="flex flex-col items-center w-full">
-                <a class="w-full">
-
-                <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                    Налаштування
-                </button>
-                </a>
-            </div>
-    
-            <div class="flex flex-col items-center w-full">
-            <a class="w-full">
-                <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                    Допомога
-                </button>
-                </a>
-            </div>
-    
-            <div class="flex justify-center mt-25 space-x-8 mt-auto"> 
-                <a href="https://discord.com" target="_blank" class="text-gray-600 hover:text-blue-600">
-                    <img src="Fons\discord.png" alt="Discord" class="h-14 w-14"> 
-                </a>
-                <a href="https://google.com" target="_blank" class="text-gray-600 hover:text-blue-600">
-                    <img src="Fons\google.png" alt="Google" class="h-14 w-14"> 
-                </a>
-            </div>
-            
-        </div>
+    <div class="flex items-center justify-center mb-4">
+        <img src="Fons\fon3.jpg" alt="Logo" class="h-32 w-32 rounded-full">
     </div>
+
+    <div class="flex flex-col items-center w-full space-y-4"> <!-- Додано space-y-4 для відступів між кнопками -->
+        <a href="#welcome-section" class="w-full">
+            <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Головна
+            </button>
+        </a>
+
+        <a href="http://localhost/Anime%20Of%20Home/S2.php" class="w-full">
+            <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Профіль
+            </button>
+        </a>
+
+        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Пошук
+            </button>
+        </a>
+
+        <a href="#anime-section" class="w-full">
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Аніме
+            </button>
+        </a>
+
+        <a href="#new-arrivals" class="w-full">
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Новинки
+            </button>
+        </a>
+
+        <a href="#about-us" class="w-full">
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Про нас
+            </button>
+        </a>
+
+        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Налаштування
+            </button>
+        </a>
+
+        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
+            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
+                Допомога
+            </button>
+        </a>
+    </div>
+    <!-- Контейнер для іконок -->
+    <div class="flex justify-center mt-4 space-x-2"> <!-- Встановлюємо відступ між іконками -->
+        <a href="https://discord.com" target="_blank" class="flex items-center justify-center">
+            <img src="Fons\discord.png" alt="Discord" class="icon-size"> <!-- Клас для зміни розміру -->
+        </a>
+        <a href="https://google.com" target="_blank" class="flex items-center justify-center">
+            <img src="Fons\google.png" alt="Google" class="icon-size"> <!-- Клас для зміни розміру -->
+        </a>
+    </div>
+</div>
+
     
             <div class="flex justify-center space-x-5 mt-10">
         <div class="fire-border p-5 rounded-lg shadow-lg bg-white w-full max-w-xs">
@@ -165,9 +148,9 @@ $conn->close();
             <h1 class="cartoon-font text-3xl font-bold text-center text-gray-800">Аніме для улюблених глядачів.</h1>
         </div>
         
-    <div class="content"> 
-        <p class="text-gray-700 cartoon-text">Тут ви можете переглядати свої улюблені аніме.</p>
-    </div>
+        <div class="content"> 
+                <p class="text-gray-700 cartoon-text">Тут ви можете переглядати свої улюблені аніме.</p>
+        </div>
     
     <?php
 session_start();
@@ -804,12 +787,24 @@ if (isset($_POST['add_to_cart'])) {
 </div>
 
 <div class="footer mt-5">
-    <p class="text-center text-gray-700 text-lg">Anime Of Home. Всі права захищені!</p>
     <div class="text-center text-gray-600 mt-3">
-             <p>Email для зв'язку: <a href="mailto:admin@animeofhome.com" class="text-blue-600 hover:text-blue-800">admin@animeofhome.com</a></p>
-             <p>Email власника: <a href="mailto:owner@animeofhome.com" class="text-blue-600 hover:text-blue-800">owner@animeofhome.com</a></p>
+        <p class="text-center text-gray-700 text-lg">Ваша турбота — наша пріоритет.</p>
+
+        <p class="mt-2">Власник - Email для зв'язку: 
+            <a href="mailto:admin@animeofhome.com" class="text-blue-600 hover:text-blue-800">
+                admin@animeofhome.com
+            </a>
+        </p>
+        <p class="mt-2">Адміністратор - Email власника: 
+            <a href="mailto:owner@animeofhome.com" class="text-blue-600 hover:text-blue-800">
+                owner@animeofhome.com
+            </a>
+        </p>
     </div>
+
+    <p class="text-center text-gray-700 text-lg mt-5">Anime Of Home. Всі права захищені!</p>
 </div>
+
 
 </body>
 </html>

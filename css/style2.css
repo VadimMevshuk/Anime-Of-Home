@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333333; /* Темно-сірий фон */
+}
+
+.cart-icon {
+    position: fixed;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cart-icon:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(45deg, #ff5733, #ffbc33);
+    background-size: 400% 400%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cart-panel.open {
+    right: 0;
+    box-shadow: 0 0 30px rgba(255, 87, 51, 0.8);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.anime-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.anime-item:hover {
+    transform: scale(1.05);
+}
+
+.anime-item h2 {
+    color: black;
+    font-family: 'Permanent Marker', 'Comic Sans MS', sans-serif;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.anime-item p {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.anime-item button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.anime-item button:hover {
+    background-color: #ff3333;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}
+
+.fire-border {
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff5733, #ffbc33);
+    background-clip: padding-box;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.fire-border:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ffbc33, #ff5733);
+    box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
+}
+
+h1.text {
+    color: #333;
+    font-weight: 900;
+    font-family: 'Permanent Marker', 'Comic Sans MS', sans-serif;
+    font-size: 28px;
+}
+
+.watch-button {
+    color: white !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    margin-top: 10px !important;
+    transition: background-color 0.3s ease !important;
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+.watch-button:hover {
+    background-color: #28a745 !important;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: normal;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    text-rendering: optimizeSpeed;
+    letter-spacing: 10px;
+}
+
+.logo {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    left: -8%;
+    margin: 0 auto 20px;
+}
+
+.panel {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 10;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel:hover {
+    transform: translateX(240px);
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.panel a, .panel button {
+    display: block;
+    color: #e85019;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin-left: -10%;
+    margin-right: auto;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.panel a:hover, .panel button:hover {
+    color: #ffffff;
+}
+
+.icon-size {
+    width: 48px;
+    height: 48px;
+    margin-top: 140%;
+    margin-left: -40%;
+    transition: transform 0.3s ease;
+}
+
+.icon-size:hover {
+    transform: scale(1.1);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.space-x-2 > * + * {
+    margin-left: 8px;
+}
+
+.panel button {
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #ee6300;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.panel button:hover {
+    background-color: #000;
+    color: #ff1e00;
+    border-color: #000;
+}
+
+.fire-text {
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif; /* Мультяшний шрифт */
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff6600, #ff9900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome-section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cartoon-font {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(31, 41, 55, 1); /* Темно-синій колір для тексту */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тінь для тексту */
+}

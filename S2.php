@@ -4,7 +4,7 @@ session_start();
 if (isset($_POST['remove_from_cart'])) {
     $anime_name = $_POST['anime_name'];
 
-    // Видаляємо елемент з кошика
+    
     foreach ($_SESSION['cart'] as $key => $item) {
         if ($item['name'] === $anime_name) {
             unset($_SESSION['cart'][$key]);
@@ -16,257 +16,79 @@ if (isset($_POST['remove_from_cart'])) {
     $_SESSION['cart'] = array_values($_SESSION['cart']);
 }
 ?>
-<?php
-session_start();
 
-if (isset($_POST['remove_from_cart'])) {
-    $anime_name = $_POST['anime_name'];
-
-    // Видаляємо елемент з кошика
-    foreach ($_SESSION['cart'] as $key => $item) {
-        if ($item['name'] === $anime_name) {
-            unset($_SESSION['cart'][$key]);
-            echo "<script>alert('Аніме видалено з кошика!');</script>";
-            break;
-        }
-    }
-
-    $_SESSION['cart'] = array_values($_SESSION['cart']);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="ct/script2.js"></script>
+    <script src="ct/script3.js"></script>
     <title>Cart with Cartoonish Style</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #f4f4f9;
-        }
-
-        .cart-icon {
-            position: fixed;
-            top: 85px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background-image: url('');
-            background-size: cover;
-            background-position: center;
-            cursor: pointer;
-            z-index: 1100;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .cart-icon:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .cart-panel {
-            position: fixed;
-            top: 0;
-            right: -400px; /* Панель прихована */
-            height: 100%;
-            width: 300px;
-            background: linear-gradient(45deg, #ff5733, #ffbc33);
-            background-size: 400% 400%;
-            animation: gradientShift 5s ease infinite;
-            box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
-            transition: right 0.3s ease-in-out;
-            overflow-y: auto;
-            z-index: 1000;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .cart-panel.open {
-            right: 0; /* Панель відкривається */
-            box-shadow: 0 0 30px rgba(255, 87, 51, 0.8);
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .anime-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .anime-item:hover {
-            transform: scale(1.05);
-        }
-
-        .anime-item h2 {
-            color: black;
-            font-family: 'Permanent Marker', 'Comic Sans MS', sans-serif;
-            font-weight: bold;
-            text-shadow: none;
-        }
-
-        .anime-item p {
-            margin: 5px 0;
-            font-size: 17px;
-        }
-
-        .anime-item button {
-            background-color: #ff6666;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-
-        .anime-item button:hover {
-            background-color: #ff3333;
-        }
-
-        .empty-cart {
-            text-align: center;
-            font-size: 16px;
-            color: #888;
-        }
-
-        .fire-border {
-            padding: 15px;
-            border: 2px solid transparent;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(45deg, #ff5733, #ffbc33);
-            background-clip: padding-box;
-            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-
-        .fire-border:hover {
-            transform: scale(1.05);
-            background: linear-gradient(45deg, #ffbc33, #ff5733);
-            box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
-        }
-
-        h1.text {
-            color: #333;
-            font-weight: 900;
-            font-family: 'Permanent Marker', 'Comic Sans MS', sans-serif;
-            font-size: 28px;
-        }
-        .watch-button {
-   
-    color: white !important;
-    border: none !important;
-    padding: 10px 15px !important;
-    border-radius: 5px !important;
-    cursor: pointer !important;
-    font-size: 14px !important;
-    margin-top: 10px !important;
-    transition: background-color 0.3s ease !important;
-    display: inline-block !important;
-    text-align: center !important;
-}
-
-.watch-button:hover {
-    background-color: #28a745 !important; /* Зелений колір при наведенні */
-}
-
-
-
-
-
-
-    
-        .text {
-            font-size: 20px;
-            line-height: 1.6;
-            font-weight: normal;
-            font-family: 'Arial', sans-serif;
-            font-style: normal;
-            text-rendering: optimizeSpeed;
-            letter-spacing: 1px;
-        }
-
-
-      /* Стилі для бічної панелі */
-.sidebar {
-  position: fixed;
-  left: -240px; /* Схована за межами екрана */
-  top: 0;
-  height: 100%;
-  width: 240px; /* Ширина панелі */
-  background-color: white;
-  z-index: 10;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease; /* Анімація плавного руху */
-}
-
-/* Анімація при наведенні */
-.sidebar:hover {
-  transform: translateX(240px); /* Висування панелі */
-}
-
-/* Стилі для посилань */
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.sidebar a {
-  display: block;
-  color: #555;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  transition: color 0.2s ease; /* Плавна зміна кольору при наведенні */
-}
-
-.sidebar a:hover {
-  color: #ff5733; /* Зміна кольору при наведенні */
-}
-
-/* Основний контент */
-.content {
-  margin-left: 20px;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-        
-    </style>
 </head>
 <body>
 
-<div class="sidebar hover-frame">
-    <h2>Меню</h2>
-    <a href="#home">Головна</a>
-    <a href="#about">Про нас</a>
-    <a href="#services">Послуги</a>
-    <a href="#contact">Контакти</a>
+<div id="welcome-section">
+        <h1 class="cartoon-font">
+           Вітаємо у вашому профілі!
+Тут ви можете переглядати і редагувати свої особисті дані, керувати списками улюблених аніме та стежити за новими релізами. Ми раді, що ви з нами!
+        </h1>
+    </div>
+
+<div class="panel hover-frame" style="background-image: url('Fons/fon35.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <img src="Fons\fon3.jpg" alt="Логотип" class="logo">
+
+    <div class="flex flex-col space-y-4 mt-4">
+        <div class="flex flex-col items-center w-full mt-4"> <!-- Встановлено відступ між логотипом і кнопками -->
+            
+        <a href="http://localhost/Anime%20Of%20Home/S1.php" class="w-full">
+    <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-4 px-6 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl hover:shadow-blue-500 transition-shadow duration-300 w-full">
+        Головна 🌟
+    </button>
+    </a>
+
+            <a >
+            <button onclick="toggleCart()" class="w-full bg-transparent border-4 border-black text-black font-semibold py-6 px-8 rounded-lg shadow-lg hover:bg-black hover:text-white hover:shadow-xl hover:shadow-blue-500 transition-shadow duration-300 text-lg">
+             Кошик 🧳
+            </button>
+            </a>
+
+            <a href="#about-section" class="w-full">
+                <button class="bg-transparent border-2 border-black text-black font-semibold py-4 px-6 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl hover:shadow-blue-500 transition-shadow duration-300 w-full">
+                    Про нас
+                </button>
+            </a>
+            <a href="#services-section" class="w-full">
+                <button class="bg-transparent border-2 border-black text-black font-semibold py-4 px-6 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl hover:shadow-blue-500 transition-shadow duration-300 w-full">
+                    Послуги
+                </button>
+            </a>
+            <a href="#contact-section" class="w-full">
+                <button class="bg-transparent border-2 border-black text-black font-semibold py-4 px-6 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl hover:shadow-blue-500 transition-shadow duration-300 w-full">
+                    Контакти
+                </button>
+            </a>
+
+        </div>
+
+        <div class="icon-container mt-4">
+            <a href="https://discord.com" target="_blank" class="flex items-center justify-center">
+                <img src="Fons\discord.png" alt="Discord" class="icon-size">
+            </a>
+            <a href="https://google.com" target="_blank" class="flex items-center justify-center">
+                <img src="Fons\google.png" alt="Google" class="icon-size">
+            </a>
+        </div>
+    </div>
 </div>
 
 
-  <div class="cart-icon" onclick="toggleCart()"></div>
+</div>
+ 
     <div id="cartPanel" class="cart-panel">
         <div class="p-4">
-            <h1 class="text font-bold mb-4">Ваш Anime кошик</h1>
+        <h1 class="fire-text">Anime кошик</h1>
             <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0): ?>
                 <?php foreach ($_SESSION['cart'] as $item): ?>
                     <div class="anime-item fire-border">
@@ -288,11 +110,62 @@ if (isset($_POST['remove_from_cart'])) {
     </div>
     </div>
 
-    <script>
-        function toggleCart() {
-            const cartPanel = document.getElementById('cartPanel');
-            cartPanel.classList.toggle('open');
+   
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Frame</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
-    </script>
+
+        .centered-frame {
+            position: fixed;
+            top: 500px; /* Відступ від верхньої частини сторінки */
+            width: 1000px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 15px; /* Заокруглені краї */
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-frame h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        .centered-frame p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-frame">
+        <h1>Вітаємо на сторінці!</h1>
+        <p>Це інформаційна панель з заокругленими краями.</p>
+    </div>
 </body>
 </html>
