@@ -1,8 +1,3 @@
-<?php
-include('db_conne.php');
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -10,24 +5,36 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style3.css">
     <script src="ct/script.js"></script>
-
-    
-        <title>Anime Of Home</title>
+    <title>Anime Of Home</title>
 </head>
-
 <body class="bg-gray-100">
     
-    <div id="welcome-section" class="border p-6 mt-1 rounded-lg shadow-lg bg-white w-full max-w-3xl mx-auto flex justify-center">
-        <h1 class="cartoon-font text-3xl font-bold text-center text-gray-800">Вітаю вас на сайті Anime Of Home. Ми раді, що ти з нами і ми впевнені, що ти знайдеш тут своє улюблене аніме.</h1>
-    </div>
-    
+<div id="welcome-section" class="border p-6 mt-5 rounded-lg shadow-lg bg-white w-full max-w-3xl mx-auto flex justify-center" style="margin-top: 20px;">
+    <h1 class="cartoon-font text-3xl font-bold text-center text-gray-800">
+        Вітаю вас на сайті Anime Of Home. Ми раді, що ти з нами і ми впевнені, що ти знайдеш тут своє улюблене аніме.
+    </h1>
+</div>
+
+
+<div class="auth-buttons-container mt-10 flex justify-end gap-6">
+    <a href="http://localhost/Anime%20Of%20Home/database%20and%20password%20registration/S1-S2REGISTERING.PHP" class="auth-button fire-button">
+        Реєстрація
+    </a>
+    <a href="http://localhost/Anime%20Of%20Home/database%20and%20password%20registration/S1-S2EXIT.PHP" class="auth-button fire-button">
+        Вхід
+    </a>
+</div>
+
+
+
     <div class="sidebar hover-frame p-10 shadow-lg rounded-lg mt-30 bg-cover bg-center" style="background-image: url('Fons/fon34.jpg');">
     <div class="flex items-center justify-center mb-4">
         <img src="Fons\fon3.jpg" alt="Logo" class="h-32 w-32 rounded-full">
     </div>
 
-    <div class="flex flex-col items-center w-full space-y-4"> <!-- Додано space-y-4 для відступів між кнопками -->
+    <div class="flex flex-col items-center w-full space-y-4"> 
         <a href="#welcome-section" class="w-full">
             <button onclick="scrollToSection()" class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
                 Головна
@@ -40,7 +47,7 @@ $conn->close();
             </button>
         </a>
 
-        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
+        <a href="#" class="w-full">
             <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
                 Пошук
             </button>
@@ -64,32 +71,28 @@ $conn->close();
             </button>
         </a>
 
-        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
-            <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
-                Налаштування
-            </button>
-        </a>
+      
 
-        <a href="#" class="w-full"> <!-- Додано href="#" для запобігання відсутності лінка -->
+        <a href="#" class="w-full"> 
             <button class="bg-transparent border-2 border-black text-black font-semibold py-2 px-3 rounded shadow-lg hover:bg-black hover:text-white hover:shadow-xl transition-shadow duration-300 animate-glow underline w-full">
                 Допомога
             </button>
         </a>
     </div>
-    <!-- Контейнер для іконок -->
-    <div class="flex justify-center mt-4 space-x-2"> <!-- Встановлюємо відступ між іконками -->
+
+    <div class="flex justify-center mt-4 space-x-2 "> 
         <a href="https://discord.com" target="_blank" class="flex items-center justify-center">
-            <img src="Fons\discord.png" alt="Discord" class="icon-size"> <!-- Клас для зміни розміру -->
+            <img src="Fons\discord.png" alt="Discord" class="icon-size"> 
         </a>
         <a href="https://google.com" target="_blank" class="flex items-center justify-center">
-            <img src="Fons\google.png" alt="Google" class="icon-size"> <!-- Клас для зміни розміру -->
+            <img src="Fons\google.png" alt="Google" class="icon-size">
         </a>
     </div>
 </div>
 
     
-            <div class="flex justify-center space-x-5 mt-10">
-        <div class="fire-border p-5 rounded-lg shadow-lg bg-white w-full max-w-xs">
+    <div class="flex justify-center space-x-5 mt-10">
+    <div class="fire-border p-5 rounded-lg shadow-lg bg-white w-full max-w-xs">
             <h2 class="text-center text-gray-800 font-bold text-xl cartoon-font">Правила сайту</h2>
             <p class="text-center text-gray-700 text-lg cartoon-font">👾 Ласкаво просимо до світу аніме! 🌟 Тут ви знайдете всі найкращі серії та фільми. Не забувайте дотримуватися правил спільноти: поважайте один одного і не публікуйте спойлери! 🎬</p>
             <div class="flex justify-center mt-5">

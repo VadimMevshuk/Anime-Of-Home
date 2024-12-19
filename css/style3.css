@@ -1,0 +1,45 @@
+.auth-buttons-container {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px; 
+    position: absolute; 
+    top: 5px; 
+    right: 130px; 
+}
+
+.auth-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    margin: 0;
+}
+
+.auth-buttons-container a:hover {
+    transform: scale(1.05);
+}
+
+.fire-button {
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff5733, #ffbc33);
+    background-clip: padding-box;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 20px auto;
+    width: auto;
+    height: auto;
+}
+
+.fire-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}

@@ -2883,20 +2883,20 @@ button:hover {
 /* Стилі для бічної панелі */
 .sidebar {
   position: fixed;
-  left: -250px; /* Панель буде на лівому краї екрану */
+  left: -250px; 
   top: 0;
   height: 100%;
-  width: 300px; /* Ширина панелі (збільшена) */
+  width: 300px; 
   background-color: white;
   z-index: 10;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease; /* Анімація плавного висування */
+  transition: transform 0.3s ease; 
 }
 
 /* Анімація при наведенні */
 .sidebar:hover {
-  transform: translateX(240px); /* Висування панелі */
+  transform: translateX(240px); 
 }
 
 /* Заголовок панелі */
@@ -2912,39 +2912,39 @@ button:hover {
 .sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрує кнопки по горизонталі */
+  align-items: center; 
 }
 
 /* Стилі для кнопок і посилань */
 .sidebar a, .sidebar button {
   display: block;
-  color: #e85019; /* Початковий колір тексту */
+  color: #e85019; 
   text-decoration: none;
-  margin-bottom: 5px; /* Відступ між кнопками */
+  margin-bottom: 5px; 
   font-size: 1.2rem;
-  padding: 8px 8px; /* Зменшене внутрішнє відступи */
-  width: 90%; /* Ширина на всю ширину контейнера */
-  max-width: 230px; /* Обмеження максимальної ширини */
-  text-align: center; /* Центрування тексту */
-  background-color: transparent; /* Прозорий фон */
-  border-radius: 5px; /* Закруглені кути */
+  padding: 8px 8px; 
+  width: 90%; 
+  max-width: 230px; 
+  text-align: center; 
+  background-color: transparent; 
+  border-radius: 5px; 
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; /* Плавні переходи */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Мультяшний шрифт */
-  outline: none; /* Видалення обведення */
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; 
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  outline: none; 
 }
 
 /* Стиль при наведенні */
 .sidebar a:hover, .sidebar button:hover {
 
-  color: #123ecf; /* Колір тексту стає жовто-оранжевим */
-  border-color: #e83119; /* Колір контуру стає жовто-оранжевим */
+  color: #123ecf; 
+  border-color: #e83119; 
 }
 
 
 /* Основний контент */
 .content {
-  margin-left: -25px; /* Залишає місце для бічної панелі */
+  margin-left: -25px; 
   padding: 50px;
   font-family: Arial, sans-serif;
 }
@@ -2954,33 +2954,33 @@ button:hover {
 .heart-button {
   background-color: transparent;
   border: none;
-  font-size: 40px; /* Збільшення розміру серця */
+  font-size: 40px; 
   cursor: pointer;
-  color: red; /* Червоне серце */
-  transition: transform 0.3s, color 0.2s, box-shadow 0.2s; /* Плавний перехід для анімацій */
-  position: relative; /* Потрібно для позиціонування тіні */
+  color: red; 
+  transition: transform 0.3s, color 0.2s, box-shadow 0.2s; 
+  position: relative; 
 }
 
 /* Зміна кольору фону при наведенні */
 .heart-button:hover {
-  animation: pulse 0.6s infinite;  /* Анімація пульсації */
-  transform: scale(1.3);   /* Трохи збільшуємо кнопку при наведенні */
-  color: #ff0000;  /* Яскраво червоний колір серця при наведенні */
+  animation: pulse 0.6s infinite;  
+  transform: scale(1.3);  
+  color: #ff0000;  
 }
 .heart-button {
-  font-size: 19px; /* або 12px */
+  font-size: 19px; 
 }
 
 /* Анімація пульсації */
 @keyframes pulse {
   0% {
-      transform: scale(1.2); /* Початковий розмір */
+      transform: scale(1.2);
   }
   50% {
-      transform: scale(1.4); /* Збільшення на півшляху */
+      transform: scale(1.4); 
   }
   100% {
-      transform: scale(1.2); /* Повернення до початкового розміру */
+      transform: scale(1.2); 
   }
 }
 /* Стиль для кнопки серця */
@@ -2993,26 +2993,16 @@ button:hover {
   transition: transform 0.3s, color 0.2s, box-shadow 0.2s;
 }
 
+
 .icon-size:hover {
-  transform: scale(1.1); /* Збільшення при наведенні */
+  transform: scale(1.1); 
 }
 .icon-size {
-  height: 48px; /* Встановіть бажаний розмір */
-  width: 48px; /* Встановіть бажаний розмір */
+  height: 50px; 
+  width: 50px; 
 }
 
-/* space-x-2 додає відступ між елементами в контейнері */
+
 .space-x-2 > * + * {
-  margin-left: 8px; /* Відступ між іконками */
+  margin-left: 8px; 
 }
-
-
-
-
-
-
-
-
-
-
-
